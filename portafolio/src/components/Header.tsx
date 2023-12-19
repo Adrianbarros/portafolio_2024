@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/Header.css'
-import { ContactMe } from "./ContactMe";
+
 
 
 export const Header = () => {
@@ -12,8 +12,8 @@ export const Header = () => {
                 <div className="tag">Expirience</div>
                 <div className="tag">Skills</div>
             </div>
-            <div className="button">
-                <ContactMe />
+            <div className="contact">
+                <button className="button">Contact Me!</button>
             </div>
         </div>
     )

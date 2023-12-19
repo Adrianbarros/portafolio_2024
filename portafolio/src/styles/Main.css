@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+}
+
+.greeding {
+    display: flex;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%;
+}
+
+.first-line {
+    display: flex;
+}
+
+.highlight {
+    position: relative;
+    left: -1rem;
+    top: -2rem;
+}
+
+.description {
+    display: flex;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.button-section {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.button-main {
+    border-radius: 18px;
+    border: none;
+    width: 16rem;
+    height: 4rem;
+    background: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.button-text {
+    font-family: Poppins;
+    font-size: 24px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.curved-arrow {
+    position: relative;
+    top: 3rem;
+    left: 2rem;
+}
+
+
+.image {
+    width: 50%;
+}
