@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 .intro {
@@ -12,6 +13,11 @@
     width: 50%;
     margin-left: 1.5rem;
     margin-top: 2rem;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
 }
 
 .greeding {
@@ -31,6 +37,8 @@
     left: -1rem;
     top: -2rem;
 }
+
+
 
 .description {
     display: flex;

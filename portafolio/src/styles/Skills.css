@@ -1,6 +1,25 @@
 .skill-section {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
 }
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.accent-title {
+    height: 5rem;
+    width: 10rem;
+    position: relative;
+    left: 4rem;
+    top: 1.5rem;
+}
+
 
 
 .title-text {
@@ -10,4 +29,38 @@
     background: var(--Degrade, linear-gradient(90deg, #B224EF 0%, #7579FF 100%));
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.sub-title-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sub-title-text {
+    font-size: 25px;
+    font-weight: 600;
+    background: var(--Degrade, linear-gradient(90deg, #B224EF 0%, #7579FF 100%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.concept-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lottie {
+    width: 25%;
+    height: 25%;
 }
