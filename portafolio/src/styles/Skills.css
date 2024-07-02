@@ -22,15 +22,6 @@
 
 
 
-.title-text {
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 105%;
-    background: var(--Degrade, linear-gradient(90deg, #B224EF 0%, #7579FF 100%));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .sub-title-skills {
     display: flex;
     justify-content: center;
