@@ -1,11 +1,11 @@
 .card-container {
     display: flex;
-    height: 25rem;
+    height: 20rem;
     border-radius: 15%;
     margin-top: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     margin-left: 2rem;
-    flex: 0 0 30%;
+    width: 20rem;
 }
 
 .card-content {
@@ -16,8 +16,12 @@
     flex-direction: column;
 }
 
+.card-content.is-flipped {
+    transform: rotateY(180deg);
+}
+
 .card-img {
-    width: 50%;
+    width: 40%;
     height: auto;
     border-radius: 15%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);

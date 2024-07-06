@@ -6,7 +6,7 @@ import data from '../data/employment.json'
 
 export const Expirience = () => {
     const employment = data.data
-    console.log(employment)
+
     return (
         <div className="title">
             <div className="expirience-section">
