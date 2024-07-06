@@ -16,7 +16,7 @@ export const Expirience = () => {
             <div className="card-row">
                 {employment.map((item, index) => {
                     return (
-                        <Card />
+                        <Card key={index} data={item} />
                     )
                 })}
             </div>

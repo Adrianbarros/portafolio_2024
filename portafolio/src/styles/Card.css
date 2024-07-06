@@ -1,10 +1,28 @@
 .card-container {
     display: flex;
-    height: 15rem;
-    width: 10rem;
+    height: 25rem;
     border-radius: 15%;
     margin-top: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     margin-left: 2rem;
     flex: 0 0 30%;
 }
+
+.card-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 50%;
+    height: auto;
+    border-radius: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.company-name {}
+
+.position {}
