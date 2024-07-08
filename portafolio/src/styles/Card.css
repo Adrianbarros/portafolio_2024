@@ -27,6 +27,13 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-.company-name {}
+.company-name {
+    margin-top: 2rem;
+    size: 18px;
+    color: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
+}
 
-.position {}
+.position {
+    size: 14px;
+    color: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
+}
