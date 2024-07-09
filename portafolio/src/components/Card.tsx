@@ -7,20 +7,37 @@ interface Props {
     data: Employment
 }
 const Card: React.FC<Props> = ({ data }) => {
-    const [isFlipped, setIsFlipped] = useState(false)
+    const [isFlipped, setIsFlipped] = useState(true)
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped)
     }
     return (
-        <motion.div className='card-container' onClick={handleFlip}
-            style={{ width: "20rem", height: "10rem" }}
+        <motion.div onClick={handleFlip}
             transition={{ duration: 0.7 }}
             animate={{ rotateY: isFlipped ? 0 : 180 }}>
-            <div className='card-content'>
-                <img className='card-img' src={data.image} />
-                <div className='company-name'>{data.company}</div>
-                <div className='position'>{data.title}</div>
+            <div className='card-container'>
+                <motion.div
+                    transition={{ duration: 0.7 }}
+                    animate={{ rotateY: isFlipped ? 0 : 180 }}
+                    className='card-content'>
+                    <motion.div
+                        className='front'
+                        transition={{ duration: 0.7 }}
+                        animate={{ rotateY: isFlipped ? 0 : 180 }}>
+                        <img className='card-img' src={data.image} />
+                        <div className='company-name'>{data.company}</div>
+                        <div className='position'>{data.title}</div>
+                    </motion.div>
+                    <motion.div
+                        className='back'
+                        transition={{ duration: 0.7 }}
+                        animate={{ rotateY: isFlipped ? 0 : 180 }}
+                    >
+
+                    </motion.div>
+
+                </motion.div>
             </div>
 
         </motion.div>

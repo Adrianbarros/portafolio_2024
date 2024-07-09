@@ -37,3 +37,8 @@
     size: 14px;
     color: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
 }
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
