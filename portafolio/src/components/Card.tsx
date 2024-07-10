@@ -32,9 +32,15 @@ const Card: React.FC<Props> = ({ data }) => {
                     <motion.div
                         className='back'
                         transition={{ duration: 0.7 }}
-                        animate={{ rotateY: isFlipped ? 0 : 180 }}
+                        animate={{ rotateY: isFlipped ? 180 : 0 }}
                     >
+                        <div className='card-summary'>{data.statement}</div>
+                        <div>
 
+                            {data.skills.map((skill, index) => (
+                                <div key={index} className='card-skills'>{skill}</div>
+                            ))}
+                        </div>
                     </motion.div>
 
                 </motion.div>
