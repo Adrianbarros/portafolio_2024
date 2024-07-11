@@ -3,46 +3,106 @@
     height: 20rem;
     border-radius: 15%;
     margin-top: 3rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     margin-left: 2rem;
     width: 20rem;
+    perspective: 1000px;
+    position: relative;
 }
 
 .card-content {
-    display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    height: 100%;
+    position: relative;
 }
 
-.card-content.is-flipped {
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+.card-back {
+    background-color: #f0f0f0;
+    /* Lighter background color */
+    color: #333;
+    /* Darker text color for better contrast */
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Center the text */
+    padding: 1rem;
+    /* Add some padding */
+}
+
+.card-summary {
+    margin-bottom: 1rem;
+    /* Space between summary and skills */
+    font-size: 1rem;
+    color: #555;
+    /* Slightly lighter text for the summary */
+}
+
+.card-skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Ensure skills wrap if there are many */
+}
+
+.card-skills {
+    background-color: #8e6ddc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.25rem;
+    font-size: 0.875rem;
 }
 
 .card-img {
     width: 40%;
     height: auto;
     border-radius: 15%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .company-name {
     margin-top: 2rem;
-    size: 18px;
+    font-size: 18px;
     color: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
 }
 
 .position {
-    size: 14px;
+    font-size: 14px;
     color: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
 }
 
-.front,
-.back {
-    backface-visibility: hidden;
+.card-summary,
+.card-skills {
+    margin: 5px 0;
 }
 
-.card-summary {}
+@media (max-width: 600px) {
+    .card-container {
+        height: 15rem;
+        width: 15rem;
+    }
 
-.card-skills {}
+    .company-name {
+        font-size: 16px;
+    }
+
+    .position {
+        font-size: 12px;
+    }
+}
