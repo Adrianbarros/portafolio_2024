@@ -38,7 +38,7 @@ export const Main = () => {
                 </div>
             </div>
             <div className="image">
-                <Lottie animationData={animationData} />
+                {/* <Lottie animationData={animationData} /> */}
             </div>
 
         </div>

@@ -27,20 +27,22 @@ export const Skills = () => {
                 <div className="title-text">Skills</div>
             </div>
             <div className="concept-list">
-                <Lottie className='lottie' animationData={FrontEnd} />
-                <Lottie className='lottie' animationData={Backend} />
+                {/* <Lottie className='lottie' animationData={FrontEnd} />
+                <Lottie className='lottie' animationData={Backend} /> */}
             </div>
             <div className="sub-title-skills">
                 <div className="sub-title-text">Programming Languages</div>
             </div>
-            <div className="skill-list">
-                {languagesSvgs.map((svg, index) => (
-                    <div key={index}>
-                        <img className="logo" src={svg.path} alt={`${svg.name}-logo`} />
-                        <div>{svg.name}</div>
+            <div className="scroller">
+                <div className="skill-list scroller_items">
+                    {languagesSvgs.map((svg, index) => (
+                        <div key={index} className="skill-item">
+                            <img className="logo" src={svg.path} alt={`${svg.name}-logo`} />
+                            <div>{svg.name}</div>
 
-                    </div>
-                ))}
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="sub-title-skills">
                 <div className="sub-title-text">Frameworks & Libraries</div>

@@ -32,33 +32,26 @@
 
 .card-back {
     background-color: #f0f0f0;
-    /* Lighter background color */
     color: #333;
-    /* Darker text color for better contrast */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* Center the text */
     padding: 1rem;
-    /* Add some padding */
 }
 
 .card-summary {
     margin-bottom: 1rem;
-    /* Space between summary and skills */
     font-size: 1rem;
     color: #555;
-    /* Slightly lighter text for the summary */
 }
 
 .card-skills-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* Ensure skills wrap if there are many */
 }
 
 .card-skills {
