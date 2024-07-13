@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import '../styles/Skills.css'
 import CurvedLine from '../assets/curveLine.svg'
 import Lottie from "lottie-react";
@@ -20,6 +20,24 @@ const frameworkSvgs = [
 
 ];
 export const Skills = () => {
+    const scrollerRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const scroller = scrollerRef.current;
+        if (!scroller) return;
+
+        let scrollAmount = 1;
+        const handleScroll = () => {
+            scroller.scrollLeft += scrollAmount;
+            if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+                scroller.scrollLeft = 0;
+            }
+        };
+
+        const intervalId = setInterval(handleScroll, 20);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <div className="skill-section">
             <div className="title">
@@ -33,13 +51,12 @@ export const Skills = () => {
             <div className="sub-title-skills">
                 <div className="sub-title-text">Programming Languages</div>
             </div>
-            <div className="scroller">
+            <div className="scroller" ref={scrollerRef}>
                 <div className="skill-list scroller_items">
-                    {languagesSvgs.map((svg, index) => (
+                    {languagesSvgs.concat(languagesSvgs).map((svg, index) => (
                         <div key={index} className="skill-item">
                             <img className="logo" src={svg.path} alt={`${svg.name}-logo`} />
                             <div>{svg.name}</div>
-
                         </div>
                     ))}
                 </div>
