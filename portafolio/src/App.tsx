@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import './App.css';
 import { Main } from './sections/Main';
 import { Skills } from './sections/Skills';
-import { Expirience } from './sections/Expirience';
+import { Experience } from './sections/Experience';
 
 
 function App() {
@@ -12,8 +12,7 @@ function App() {
       <Header />
       <Main />
       <Skills />
-      <Expirience />
-
+      <Experience />
     </div>
   );
 }

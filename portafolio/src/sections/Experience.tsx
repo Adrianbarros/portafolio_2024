@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import '../styles/Expirience.css';
+import '../styles/Experience.css';
 import Card from "../components/Card";
 import data from '../data/employment.json'
 
 
-export const Expirience = () => {
+export const Experience = () => {
     const employment = data.data
 
     return (
-        <div className="title">
-            <div className="expirience-section">
+        <div className="title" id="experience">
+            <div className="experence-section">
             </div>
 
-            <div className="title-text">Expirience</div>
+            <div className="title-text">Experience</div>
             <div className="card-row">
                 {employment.map((item, index) => {
                     return (

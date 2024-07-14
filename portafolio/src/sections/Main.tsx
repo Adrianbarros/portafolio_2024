@@ -25,7 +25,7 @@ export const Main = () => {
                 </div>
                 <div className="description">
                     I am a Software Engineer based in NYC.
-                    I have a few years of industry expirience building, maintaining and improving software products and applications.
+                    I have a few years of industry experience building, maintaining and improving software products and applications.
                     I am very flexible and commited to build quality software and if you are interested on my work, click below!
                 </div>
                 <div className="button-section">
@@ -38,7 +38,7 @@ export const Main = () => {
                 </div>
             </div>
             <div className="image">
-                {/* <Lottie animationData={animationData} /> */}
+                <Lottie animationData={animationData} />
             </div>
 
         </div>
