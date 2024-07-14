@@ -4,6 +4,8 @@ import CurvedLine from '../assets/curveLine.svg'
 import Lottie from "lottie-react";
 import FrontEnd from '../assets/first_ani.json'
 import Backend from '../assets/sec_ani.json'
+import useInfiniteScroll from "../utils/InfinateScroll";
+
 const languagesSvgs = [
     { name: 'TypeScript', path: require('../assets/logos/typeScript.svg').default },
     { name: 'Python', path: require('../assets/logos/python.svg').default },
@@ -20,23 +22,8 @@ const frameworkSvgs = [
 
 ];
 export const Skills = () => {
-    const scrollerRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-        const scroller = scrollerRef.current;
-        if (!scroller) return;
-
-        let scrollAmount = 1;
-        const handleScroll = () => {
-            scroller.scrollLeft += scrollAmount;
-            if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
-                scroller.scrollLeft = 0;
-            }
-        };
-
-        const intervalId = setInterval(handleScroll, 20);
-
-        return () => clearInterval(intervalId);
-    }, []);
+    const languagesScrollerRef = useInfiniteScroll(1, 20);
+    const frameworksScrollerRef = useInfiniteScroll(-1, 20);
 
     return (
         <div className="skill-section">
@@ -51,7 +38,7 @@ export const Skills = () => {
             <div className="sub-title-skills">
                 <div className="sub-title-text">Programming Languages</div>
             </div>
-            <div className="scroller" ref={scrollerRef}>
+            <div className="scroller" ref={languagesScrollerRef}>
                 <div className="skill-list scroller_items">
                     {languagesSvgs.concat(languagesSvgs).map((svg, index) => (
                         <div key={index} className="skill-item">
@@ -64,14 +51,15 @@ export const Skills = () => {
             <div className="sub-title-skills">
                 <div className="sub-title-text">Frameworks & Libraries</div>
             </div>
-            <div className="skill-list">
-                {frameworkSvgs.map((svg, index) => (
-                    <div key={index}>
-                        <img className="logo" src={svg.path} alt={`${svg.name}-logo`} />
-                        <div>{svg.name}</div>
-
-                    </div>
-                ))}
+            <div className="scroller" ref={frameworksScrollerRef}>
+                <div className="skill-list scroller_items">
+                    {frameworkSvgs.concat(frameworkSvgs).map((svg, index) => (
+                        <div key={index} className="skill-item">
+                            <img className="logo" src={svg.path} alt={`${svg.name}-logo`} />
+                            <div>{svg.name}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
