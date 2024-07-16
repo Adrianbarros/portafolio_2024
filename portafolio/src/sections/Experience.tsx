@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { forwardRef } from "react";
 import '../styles/Experience.css';
 import Card from "../components/Card";
 import data from '../data/employment.json'
 
 
-export const Experience = () => {
+export const Experience = forwardRef<HTMLDivElement>((props, ref) => {
     const employment = data.data
 
     return (
-        <div className="title" id="experience">
+        <div className="title" ref={ref} id="experience">
             <div className="experence-section">
             </div>
 
@@ -23,4 +23,4 @@ export const Experience = () => {
 
         </div>
     )
-}
+})

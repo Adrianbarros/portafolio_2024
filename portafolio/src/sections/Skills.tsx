@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { forwardRef } from "react";
 import '../styles/Skills.css'
 import CurvedLine from '../assets/curveLine.svg'
 import Lottie from "lottie-react";
@@ -21,19 +21,19 @@ const frameworkSvgs = [
     { name: 'Node', path: require('../assets/logos/node.svg').default },
 
 ];
-export const Skills = () => {
+export const Skills = forwardRef<HTMLDivElement>((props, ref) => {
     const languagesScrollerRef = useInfiniteScroll(1, 20);
     const frameworksScrollerRef = useInfiniteScroll(-1, 20);
 
     return (
-        <div className="skill-section">
+        <div className="skill-section" ref={ref} id="skills">
             <div className="title">
-                <img className="accent-title" src={CurvedLine} />
+                <img className="accent-title" src={CurvedLine} alt="Curved Line" />
                 <div className="title-text">Skills</div>
             </div>
             <div className="concept-list">
-                {/* <Lottie className='lottie' animationData={FrontEnd} />
-                <Lottie className='lottie' animationData={Backend} /> */}
+                <Lottie className='lottie' animationData={FrontEnd} />
+                <Lottie className='lottie' animationData={Backend} />
             </div>
             <div className="sub-title-skills">
                 <div className="sub-title-text">Programming Languages</div>
@@ -63,4 +63,4 @@ export const Skills = () => {
             </div>
         </div>
     )
-}
+});
