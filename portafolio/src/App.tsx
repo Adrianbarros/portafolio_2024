@@ -17,7 +17,7 @@ const App = () => {
   };
   return (
     <div className="App">
-      <Header sectionRefs={sectionRefs} />
+      <Header sectionRef={sectionRefs} />
       <div ref={sectionRefs.about}>
         <Main />
       </div>

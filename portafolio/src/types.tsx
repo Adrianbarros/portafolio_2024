@@ -6,3 +6,10 @@ export interface Employment {
     statement: string,
     skills: string[],
 }
+
+export interface SectionRefs {
+    about: React.RefObject<HTMLDivElement>;
+    experience: React.RefObject<HTMLDivElement>;
+    skills: React.RefObject<HTMLDivElement>;
+    contact: React.RefObject<HTMLDivElement>;
+};

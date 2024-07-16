@@ -1,17 +1,13 @@
-import React, { useRef } from "react";
+import React from "react";
 import '../styles/Header.css'
+import { SectionRefs } from '../types'
 
 type HeaderProps = {
-    sectionRefs: React.MutableRefObject<{
-        about: HTMLDivElement | null;
-        experience: HTMLDivElement | null;
-        skills: HTMLDivElement | null;
-        contact: HTMLDivElement | null;
-    }>;
-};
+    sectionRef: SectionRefs
+}
 
-export const Header = ({ sectionRefs }: any) => {
-    const scrollToSection = (ref: any) => {
+export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
+    const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
         if (ref && ref.current) {
             const topOffset = ref.current.offsetTop;
             window.scrollTo({
@@ -24,13 +20,13 @@ export const Header = ({ sectionRefs }: any) => {
         <div className="header">
             <div className="name">Adrian Barros</div>
             <div className="tags">
-                <button onClick={() => scrollToSection(sectionRefs.about)} className="tag-button">
+                <button onClick={() => scrollToSection(sectionRef.about)} className="tag-button">
                     <div className="tag">About Me</div>
                 </button>
-                <button onClick={() => scrollToSection(sectionRefs.experience)} className="tag-button">
+                <button onClick={() => scrollToSection(sectionRef.experience)} className="tag-button">
                     <div className="tag">Experience</div>
                 </button>
-                <button onClick={() => scrollToSection(sectionRefs.skills)} className="tag-button">
+                <button onClick={() => scrollToSection(sectionRef.skills)} className="tag-button">
                     <div className="tag">Skills</div>
                 </button>
             </div>
