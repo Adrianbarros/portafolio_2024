@@ -4,6 +4,7 @@ import './App.css';
 import { Main } from './sections/Main';
 import { Skills } from './sections/Skills';
 import { Experience } from './sections/Experience';
+import { ContactMe } from './sections/ContactMe';
 
 
 
@@ -19,7 +20,7 @@ const App = () => {
     <div className="App">
       <Header sectionRef={sectionRefs} />
       <div ref={sectionRefs.about}>
-        <Main />
+        <Main sectionRef={sectionRefs} />
       </div>
       <div ref={sectionRefs.skills}>
         <Skills />
@@ -28,9 +29,9 @@ const App = () => {
         <Experience />
       </div>
 
-      {/* <div ref={sectionRefs.contact}>
-        <Contact />
-      </div> */}
+      <div ref={sectionRefs.contact}>
+        <ContactMe />
+      </div>
     </div>
   );
 }

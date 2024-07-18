@@ -1,21 +1,13 @@
 import React from "react";
 import '../styles/Header.css'
 import { SectionRefs } from '../types'
+import { scrollToSection } from "../utils/ScrollToSection";
 
 type HeaderProps = {
     sectionRef: SectionRefs
 }
 
 export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
-    const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
-        if (ref && ref.current) {
-            const topOffset = ref.current.offsetTop;
-            window.scrollTo({
-                top: topOffset,
-                behavior: 'smooth',
-            });
-        }
-    };
     return (
         <div className="header">
             <div className="name">Adrian Barros</div>
@@ -31,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
                 </button>
             </div>
             <div className="contact">
-                <button className="button">Contact Me!</button>
+                <button onClick={() => scrollToSection(sectionRef.contact)} className="button">Contact Me!</button>
             </div>
         </div>
     );
