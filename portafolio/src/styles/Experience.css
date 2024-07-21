@@ -1,6 +1,7 @@
-.experience-section {
+.experence-section {
     display: flex;
-    margin-top: 3rem;
+    flex-direction: column;
+    margin-top: 5rem;
 }
 
 .card-row {

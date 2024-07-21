@@ -8,10 +8,7 @@ export const Experience = forwardRef<HTMLDivElement>((props, ref) => {
     const employment = data.data
 
     return (
-        <div className="title" ref={ref} id="experience">
-            <div className="experence-section">
-            </div>
-
+        <div className="experence-section" ref={ref} id="experience">
             <div className="title-text">Experience</div>
             <div className="card-row">
                 {employment.map((item, index) => {
