@@ -58,10 +58,17 @@
 .Social-links {
     display: flex;
     width: 50%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .link-logo {
-    max-width: 90px;
+    width: 5rem;
     height: auto;
+}
+
+.email-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
