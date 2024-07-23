@@ -19,6 +19,7 @@ const frameworkSvgs = [
     { name: 'Next', path: require('../assets/logos/next.svg').default },
     { name: 'Flask', path: require('../assets/logos/flask.svg').default },
     { name: 'Node', path: require('../assets/logos/node.svg').default },
+    { name: 'AWS', path: require('../assets/logos/aws.svg').default },
 
 ];
 export const Skills = forwardRef<HTMLDivElement>((props, ref) => {
