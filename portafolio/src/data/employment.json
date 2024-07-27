@@ -25,7 +25,8 @@
                 "Django",
                 "React Native",
                 "AWS",
-                "PosgresDB"
+                "PosgresDB",
+                "Jest"
             ]
         },
         {
