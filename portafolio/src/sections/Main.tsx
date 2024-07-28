@@ -7,6 +7,8 @@ import ArrowCircle from '../assets/arrowCircle.svg'
 import animationData from '../assets/animation.json'
 import { scrollToSection } from "../utils/ScrollToSection";
 import { SectionRefs } from '../types'
+import { motion } from 'framer-motion';
+
 
 type MainProps = {
     sectionRef: SectionRefs
@@ -34,14 +36,24 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
                     I have a few years of industry experience building, maintaining and improving software products and applications.
                     I am very flexible and commited to build quality software and if you are interested on my work, click below!
                 </div>
-                <div className="button-section">
-                    <button className="button-main"
-                        onClick={() => scrollToSection(sectionRef.contact)}>
+                <div className="button-section" onClick={() => scrollToSection(sectionRef.contact)}>
+                    <motion.button
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{
+                            scale: 0.8,
+                            y: 80,
+                        }}
+                        className="button-main"
+                    >
                         <div className="button-text">Contact Me! </div>
                         <img src={ArrowCircle} alt="Arrow Circle" />
-                    </button>
+                    </motion.button >
 
-                    <img className="curved-arrow" src={Arrow} alt="cruved arrow" />
+                    <motion.img
+                        whileHover={{ x: -20 }}
+                        className="curved-arrow"
+                        src={Arrow}
+                        alt="cruved arrow" />
                 </div>
             </div>
             <div className="image">
