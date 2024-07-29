@@ -7,7 +7,7 @@ import ArrowCircle from '../assets/arrowCircle.svg'
 import animationData from '../assets/animation.json'
 import { scrollToSection } from "../utils/ScrollToSection";
 import { SectionRefs } from '../types'
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 
 type MainProps = {
@@ -16,6 +16,20 @@ type MainProps = {
 
 
 export const Main: React.FC<MainProps> = ({ sectionRef }) => {
+    const arrowControls = useAnimation();
+    const logoControls = useAnimation();
+    const handleHoverStart = () => {
+        arrowControls.start({ x: -20 });
+        logoControls.start({
+            x: [0, -10, 10, -10, 10, 0],
+            transition: { duration: 2, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse' }
+        })
+
+    }
+    const handleHoverEnd = () => {
+        arrowControls.start({ x: 0 });
+        logoControls.stop()
+    }
     return (
         <div className="container">
             <div className="intro">
@@ -39,6 +53,8 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
                 <div className="button-section" onClick={() => scrollToSection(sectionRef.contact)}>
                     <motion.button
                         whileHover={{ scale: 1.2 }}
+                        onHoverStart={handleHoverStart}
+                        onHoverEnd={handleHoverEnd}
                         whileTap={{
                             scale: 0.8,
                             y: 80,
@@ -46,11 +62,14 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
                         className="button-main"
                     >
                         <div className="button-text">Contact Me! </div>
-                        <img src={ArrowCircle} alt="Arrow Circle" />
+                        <motion.img
+                            src={ArrowCircle}
+                            animate={logoControls}
+                            alt="Arrow Circle" />
                     </motion.button >
 
                     <motion.img
-                        whileHover={{ x: -20 }}
+                        animate={arrowControls}
                         className="curved-arrow"
                         src={Arrow}
                         alt="cruved arrow" />
