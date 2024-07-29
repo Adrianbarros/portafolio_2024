@@ -5,7 +5,6 @@
     width: 30rem;
     margin: 2rem auto;
     padding: 2rem;
-    border: 1px solid #ccc;
     border-radius: 8px;
 }
 
@@ -29,16 +28,13 @@
     height: 10rem;
 }
 
-.email-card button {
-    padding: 0.75rem;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+.email-submit {
+    width: 30rem;
+    background-color: #fcc73a;
+    border-radius: 30px;
+    color: #B224EF;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0.5rem;
 
-.email-card button:hover {
-    background-color: #0056b3;
 }

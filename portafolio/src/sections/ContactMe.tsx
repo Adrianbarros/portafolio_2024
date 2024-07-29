@@ -49,7 +49,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
 
             </div>
             <div className='contact-left'>
-                <div className='contact-title'>Lets Connect!</div>
+                <div className='contact-title'>Send me a message!</div>
                 <EmailForm />
 
 

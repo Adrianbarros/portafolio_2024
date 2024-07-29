@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import emailjs from 'emailjs-com';
 import '../styles/EmailForm.css';
+import { motion } from 'framer-motion';
 
 export const EmailForm = () => {
     const [formData, setFormData] = useState({
@@ -34,19 +35,12 @@ export const EmailForm = () => {
 
     return (
         <form className='email-card' onSubmit={handleSubmit}>
-            <label>
-                Email:
-                <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-            </label>
-            <label>
-                Subject:
-                <input type="text" name="subject" value={formData.subject} onChange={handleChange} required />
-            </label>
-            <label>
-                Message:
-                <textarea className='message-box' name="message" value={formData.message} onChange={handleChange} required ></textarea>
-            </label>
-            <button type="submit">Send</button>
+            <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder='Email' />
+            <input type="text" name="subject" value={formData.subject} onChange={handleChange} required placeholder='Subject' />
+            <textarea className='message-box' name="message" value={formData.message} onChange={handleChange} required placeholder='Write your message here! Or just say hi!' />
+            <motion.button
+                whileHover={{ scale: 1.1 }}
+                className='email-submit' type="submit">Send</motion.button>
         </form>
     );
 };
