@@ -14,7 +14,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
         <div className='contact-section' ref={ref} id="contact">
             <div className='contact-right'>
 
-                <div className='contact-subtitle'>Follow me in my socials</div>
+                <div className='contact-subtitle'>Learn more about me!</div>
                 <div className='Social-links'>
                     <motion.img
                         className='link-logo'
@@ -44,6 +44,24 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
                         }}
                         src={gmail}
                     />
+
+                </div>
+                <div className='other-links'>
+                    <div className='contact-subtitle'>Schedule a coffee chat with me</div>
+
+                    <motion.div className='calendary-link'>
+                        Schedule time with me!
+                        <motion.img className='small-logo' src='https://assets.calendly.com/assets/frontend/media/calendly-33a0809afc4c21162dd7.svg' />
+                    </motion.div>
+
+                </div>
+                <div className='other-links'>
+                    <div className='contact-subtitle'>Or Download my resume</div>
+                    <motion.div className='resume-link'>
+                        Download PDF
+
+                    </motion.div>
+
 
                 </div>
 
