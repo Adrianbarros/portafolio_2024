@@ -56,7 +56,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
 
                 </div>
                 <div className='other-links'>
-                    <div className='contact-subtitle'>Get my information!</div>
+                    <div className='contact-subtitle'>Or Download my Resume!</div>
                     <motion.div className='resume-link'>
                         Download PDF
 
