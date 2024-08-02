@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { EmailForm } from '../components/EmailForm'
+import { EmailForm } from '../components/emails/EmailForm'
 import '../styles/ContactMe.css'
 import resume from '../assets/adrianBarrosRes.pdf';
 import linkedIn from '../assets/logos/linkedIn.png';
