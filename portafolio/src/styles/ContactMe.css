@@ -79,6 +79,7 @@
 
 .calendary-link {
     height: 4rem;
+    width: 100%;
     background-color: #0069FF;
     border-radius: 40px;
     display: flex;
