@@ -18,6 +18,9 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
         link.click();
         document.body.removeChild(link);
     }
+    const handleOpenLink = (link: string) => {
+        window.open(link, '_blank');
+    };
     return (
         <div className='contact-section' ref={ref} id="contact">
             <div className='contact-right'>
@@ -25,6 +28,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
                 <div className='contact-subtitle'>Learn more about me!</div>
                 <div className='Social-links'>
                     <motion.img
+                        onClick={() => { handleOpenLink('https://www.linkedin.com/in/adrian-s-barros/') }}
                         className='link-logo'
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         whileTap={{
@@ -36,6 +40,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
                     />
                     <motion.img
                         className='link-logo'
+                        onClick={() => { handleOpenLink('https://github.com/Adrianbarros') }}
                         whileHover={{ scale: 1.5 }}
                         whileTap={{
                             scale: 0.8,
@@ -58,6 +63,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className='contact-subtitle'>Schedule a coffee chat with me</div>
 
                     <motion.button
+                        onClick={() => { handleOpenLink('https://calendly.com/adriansbarros1/30min?month=2024-08') }}
                         whileHover={{ scale: 1.2 }}
                         className='calendary-link'>
                         Schedule time with me!
