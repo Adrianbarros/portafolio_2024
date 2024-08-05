@@ -21,6 +21,9 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
     const handleOpenLink = (link: string) => {
         window.open(link, '_blank');
     };
+    const handleOpenEmail = () => {
+        window.open('mailto:adriansbarros1@gmail.com')
+    }
     return (
         <div className='contact-section' ref={ref} id="contact">
             <div className='contact-right'>
@@ -50,6 +53,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
                     />
                     <motion.img
                         className='link-logo'
+                        onClick={() => { handleOpenEmail() }}
                         whileHover={{ scale: 1.2, rotateX: 360 }}
                         whileTap={{
                             scale: 0.8,
