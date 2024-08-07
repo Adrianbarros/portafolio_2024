@@ -51,6 +51,7 @@ export const EmailForm = () => {
                 <textarea className='message-box' name="message" value={formData.message} onChange={handleChange} required placeholder='Write your message here! Or just say hi!' />
                 <motion.button
                     whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.8, }}
                     className='email-submit' type="submit">Send</motion.button>
             </form> : <div className='contact-title'> Message Sent!</div>}
 
