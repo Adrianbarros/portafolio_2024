@@ -5,10 +5,12 @@ import emailjs from '@emailjs/browser';
 
 export const EmailForm = () => {
     const form: any = useRef();
+
     const emailID = process.env.REACT_APP_EMAIL_ID;
     const templateID = process.env.REACT_APP_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
+    const [showForm, updateShowForm] = useState(true)
     const [formData, setFormData] = useState({
         email: '',
         subject: '',
@@ -32,7 +34,7 @@ export const EmailForm = () => {
         })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    updateShowForm(false)
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -42,15 +44,17 @@ export const EmailForm = () => {
     };
 
     return (
-        <form ref={form} className='email-card' onSubmit={handleSubmit}>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder='Email' />
-            <input type="text" name="subject" value={formData.subject} onChange={handleChange} required placeholder='Subject' />
-            <textarea className='message-box' name="message" value={formData.message} onChange={handleChange} required placeholder='Write your message here! Or just say hi!' />
-            <motion.button
-                whileHover={{ scale: 1.1 }}
-                className='email-submit' type="submit">Send</motion.button>
-        </form>
+        <>
+            {showForm ? <form ref={form} className='email-card' onSubmit={handleSubmit}>
+                <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder='Email' />
+                <input type="text" name="subject" value={formData.subject} onChange={handleChange} required placeholder='Subject' />
+                <textarea className='message-box' name="message" value={formData.message} onChange={handleChange} required placeholder='Write your message here! Or just say hi!' />
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    className='email-submit' type="submit">Send</motion.button>
+            </form> : <div className='contact-title'> Message Sent!</div>}
 
+        </>
     );
 };
 
