@@ -63,7 +63,6 @@
 
 .link-logo {
     max-width: 20%;
-
 }
 
 .email-card {
@@ -71,6 +70,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    max-width: 50%;
 }
 
 .other-links {

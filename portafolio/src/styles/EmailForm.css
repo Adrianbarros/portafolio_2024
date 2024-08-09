@@ -20,7 +20,7 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 30px;
-    width: 30rem;
+    max-width: 100%;
 }
 
 
@@ -29,7 +29,7 @@
 }
 
 .email-submit {
-    width: 30rem;
+    min-width: 10rem;
     background-color: #fcc73a;
     border-radius: 30px;
     color: #B224EF;
