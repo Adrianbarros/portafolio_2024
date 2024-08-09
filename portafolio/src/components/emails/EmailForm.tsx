@@ -37,7 +37,7 @@ export const EmailForm = () => {
                     updateShowForm(false)
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    console.log('email failed to sent', error.text);
                 },
             );
 
