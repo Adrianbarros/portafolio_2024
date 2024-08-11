@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/Header.css'
 import { SectionRefs } from '../types'
 import { scrollToSection } from "../utils/ScrollToSection";
-
+import { motion } from 'framer-motion';
 type HeaderProps = {
     sectionRef: SectionRefs
 }
@@ -23,7 +23,11 @@ export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
                 </button>
             </div>
             <div className="contact">
-                <button onClick={() => scrollToSection(sectionRef.contact)} className="button">Contact Me!</button>
+                <motion.button
+                    onClick={() => scrollToSection(sectionRef.contact)}
+                    className="button"
+                    whileHover={{ scale: 1.2 }}
+                >Contact Me! </motion.button>
             </div>
         </div>
     );
