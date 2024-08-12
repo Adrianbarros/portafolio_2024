@@ -27,6 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
                     onClick={() => scrollToSection(sectionRef.contact)}
                     className="button"
                     whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.8, }}
                 >Contact Me! </motion.button>
             </div>
         </div>
