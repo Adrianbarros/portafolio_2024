@@ -42,24 +42,25 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
     }
     return (
         <div className="container">
-            <div className="image">
-                <Lottie options={defaultOptions} style={{
-                    transform: 'scale(1.5)' // Scale the animation itself
-                }} />
-            </div>
+
+            <Lottie options={defaultOptions} style={{
+                marginTop: '-10rem',
+                marginLeft: '-13rem'
+            }} />
+
 
             <div className="intro">
 
                 <div className="first-line">
                     <div className="greeding">
-                        Hi! My Name
+                        Hi! I am
                     </div>
 
                     <img className="highlight" src={Highlight} alt="highlight" />
 
                 </div>
                 <div className="greeding">
-                    is Adrian 💻
+                    Adrian 👾
                 </div>
                 <div className="description">
                     I am a Software Engineer based in NYC.
