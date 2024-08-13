@@ -8,12 +8,13 @@ type HeaderProps = {
 }
 
 export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
+    console.log(sectionRef.about)
     return (
         <div className="header">
-            <div className="name">Adrian Barros</div>
             <div className="tags">
+                <div className="line" />
                 <button onClick={() => scrollToSection(sectionRef.about)} className="tag-button">
-                    <div className="tag">About Me</div>
+                    <div className="tag">Home</div>
                 </button>
                 <button onClick={() => scrollToSection(sectionRef.experience)} className="tag-button">
                     <div className="tag">Experience</div>
@@ -21,14 +22,10 @@ export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
                 <button onClick={() => scrollToSection(sectionRef.skills)} className="tag-button">
                     <div className="tag">Skills</div>
                 </button>
-            </div>
-            <div className="contact">
-                <motion.button
-                    onClick={() => scrollToSection(sectionRef.contact)}
-                    className="button"
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.8, }}
-                >Contact Me! </motion.button>
+                <button onClick={() => scrollToSection(sectionRef.contact)} className="tag-button">
+                    <div className="tag">Contact</div>
+                </button>
+                <div className="line" />
             </div>
         </div>
     );
