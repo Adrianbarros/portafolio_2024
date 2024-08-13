@@ -1,10 +1,10 @@
 import React from "react";
-import Lottie from "lottie-react";
+import Lottie from 'react-lottie';
 import '../styles/Main.css'
 import Highlight from '../assets/highlight.svg'
 import Arrow from '../assets/arrow.svg'
 import ArrowCircle from '../assets/arrowCircle.svg'
-import animationData from '../assets/animation.json'
+import manCoding from '../assets/manCoding.json'
 import { scrollToSection } from "../utils/ScrollToSection";
 import { SectionRefs } from '../types'
 import { motion, useAnimation } from 'framer-motion';
@@ -30,8 +30,24 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
         arrowControls.start({ x: 0 });
         logoControls.stop()
     }
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: manCoding,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+            className: "lottie-svg-class",
+            id: "lottie-svg-id"
+        }
+    }
     return (
         <div className="container">
+            <div className="image">
+                <Lottie options={defaultOptions} style={{
+                    transform: 'scale(1.5)' // Scale the animation itself
+                }} />
+            </div>
+
             <div className="intro">
 
                 <div className="first-line">
@@ -74,9 +90,6 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
                         src={Arrow}
                         alt="cruved arrow" />
                 </div>
-            </div>
-            <div className="image">
-                <Lottie animationData={animationData} />
             </div>
 
         </div>
