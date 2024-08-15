@@ -63,14 +63,14 @@
 }
 
 .button-main {
-    border-radius: 18px;
-    border: none;
-    width: 16rem;
-    height: 4rem;
-    background: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
-    display: flex;
+    display: inline-flex;
+    padding: 16px 45px;
+    border-radius: 16px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 10px;
+    background: linear-gradient(90deg, #A65224 0%, #FE7624 68.5%);
+    border: 0px;
 }
 
 .button-text {

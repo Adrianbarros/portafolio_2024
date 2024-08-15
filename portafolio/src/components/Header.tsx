@@ -2,13 +2,12 @@ import React from "react";
 import '../styles/Header.css'
 import { SectionRefs } from '../types'
 import { scrollToSection } from "../utils/ScrollToSection";
-import { motion } from 'framer-motion';
+
 type HeaderProps = {
     sectionRef: SectionRefs
 }
 
 export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
-    console.log(sectionRef.about)
     return (
         <div className="header">
             <div className="tags">
