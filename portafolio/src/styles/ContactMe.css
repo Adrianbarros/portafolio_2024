@@ -19,7 +19,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 5% 0% 0% 5%;
-    background: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #8e6ddc 100%));
+    background: var(--Purple-Gradient, linear-gradient(90deg, #B224EF 0%, #2A2C55 100%));
 }
 
 .contact-title {

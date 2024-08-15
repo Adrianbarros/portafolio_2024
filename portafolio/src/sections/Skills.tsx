@@ -1,9 +1,7 @@
 import React, { forwardRef } from "react";
+import Highlight from '../assets/highlight.svg'
 import '../styles/Skills.css'
-import CurvedLine from '../assets/curveLine.svg'
-import Lottie from "lottie-react";
-import FrontEnd from '../assets/first_ani.json'
-import Backend from '../assets/sec_ani.json'
+
 import useInfiniteScroll from "../utils/InfinateScroll";
 
 const languagesSvgs = [
@@ -28,14 +26,12 @@ export const Skills = forwardRef<HTMLDivElement>((props, ref) => {
 
     return (
         <div className="skill-section" ref={ref} id="skills">
-            <div className="title">
-                <img className="accent-title" src={CurvedLine} alt="Curved Line" />
-                <div className="title-text">Skills</div>
+            <div className="skill-title">
+                <img className="accent-title-reverse" src={Highlight} alt="Curved Line" />
+                <div className="skill-title-text">My Set of Skills</div>
+                <img className="accent-title" src={Highlight} alt="Curved Line" />
             </div>
-            <div className="concept-list">
-                <Lottie className='lottie' animationData={FrontEnd} />
-                <Lottie className='lottie' animationData={Backend} />
-            </div>
+
             <div className="sub-title-skills">
                 <div className="sub-title-text">Programming Languages</div>
             </div>
