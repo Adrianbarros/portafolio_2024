@@ -1,22 +1,17 @@
 import React, { forwardRef } from "react";
 import '../styles/Experience.css';
-import Card from "../components/Card";
 import data from '../data/employment.json'
+import temp from '../assets/images/temp.png'
 
 
 export const Experience = forwardRef<HTMLDivElement>((props, ref) => {
     const employment = data.data
+    const currentImage = '../assets/images/temp.png'
 
     return (
-        <div className="experence-section" ref={ref} id="experience">
-            <div className="title-text">Experience</div>
-            <div className="card-row">
-                {employment.map((item, index) => {
-                    return (
-                        <Card key={index} data={item} />
-                    )
-                })}
-            </div>
+        <div className="experence-section" ref={ref} id="experience" style={{ backgroundImage: `url(${temp})` }}>
+
+
 
         </div>
     )

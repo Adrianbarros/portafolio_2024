@@ -1,12 +1,19 @@
 .experence-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
-.card-row {
-    display: flex;
-    justify-content: space-around;
+.expirience-card {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    flex-wrap: wrap;
+    height: 100%;
+    z-index: -1;
 }
