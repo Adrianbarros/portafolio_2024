@@ -26,72 +26,7 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
     }
     return (
         <div className='contact-section' ref={ref} id="contact">
-            <div className='contact-right'>
 
-                <div className='contact-subtitle'>Learn more about me!</div>
-                <div className='Social-links'>
-                    <motion.img
-                        onClick={() => { handleOpenLink('https://www.linkedin.com/in/adrian-s-barros/') }}
-                        className='link-logo'
-                        whileHover={{ scale: 1.2, rotate: 360 }}
-                        whileTap={{
-                            scale: 0.8,
-                            rotate: -20,
-                            borderRadius: "100%"
-                        }}
-                        src={linkedIn}
-                    />
-                    <motion.img
-                        className='link-logo'
-                        onClick={() => { handleOpenLink('https://github.com/Adrianbarros') }}
-                        whileHover={{ scale: 1.5 }}
-                        whileTap={{
-                            scale: 0.8,
-                            rotate: -20,
-                        }}
-                        src={github}
-                    />
-                    <motion.img
-                        className='link-logo'
-                        onClick={() => { handleOpenEmail() }}
-                        whileHover={{ scale: 1.2, rotateX: 360 }}
-                        whileTap={{
-                            scale: 0.8,
-                            rotateX: -180,
-                        }}
-                        src={gmail}
-                    />
-
-                </div>
-                <div className='other-links'>
-                    <div className='contact-subtitle'>Schedule a coffee chat with me</div>
-
-                    <motion.button
-                        onClick={() => { handleOpenLink('https://calendly.com/adriansbarros1/30min?month=2024-08') }}
-                        whileHover={{ scale: 1.2 }}
-                        className='calendary-link'>
-                        Schedule time with me!
-                        <motion.img className='small-logo' src='https://assets.calendly.com/assets/frontend/media/calendly-33a0809afc4c21162dd7.svg' />
-                    </motion.button>
-
-                </div>
-                <div className='other-links'>
-                    <div className='contact-subtitle'>Or Download my Resume!</div>
-                    <motion.button
-                        whileHover={{ scale: 1.2 }}
-                        onClick={() => { handleDownload() }}
-                        className='resume-link'>
-                        Download PDF
-                    </motion.button>
-                </div>
-
-            </div>
-            <div className='contact-left'>
-                <div className='contact-title'>Send me a message!</div>
-                <EmailForm />
-
-
-            </div>
 
         </div>
     )
