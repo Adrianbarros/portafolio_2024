@@ -38,20 +38,6 @@
     top: -2rem;
 }
 
-
-
-.description {
-    width: 30rem;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-align: left;
-    margin-top: 1.8rem;
-    margin-left: -5rem;
-    margin-bottom: -2rem;
-}
-
 .button-section {
     display: flex;
     align-items: center;
@@ -77,6 +63,22 @@
     font-weight: 600;
     line-height: normal;
 }
+
+
+
+
+.description {
+    width: 30rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: left;
+    margin-top: 1.8rem;
+    margin-left: -5rem;
+    margin-bottom: -2rem;
+}
+
 
 .curved-arrow {
     position: relative;

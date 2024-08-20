@@ -1,4 +1,50 @@
 .contact-section {
     height: 100vh;
     width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-title {
+    color: #2A2C55;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.contact-text {
+    width: 38rem;
+    height: auto;
+    color: #000;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+    margin: 2.8rem 0rem 2.8rem 0rem;
+}
+
+
+.social-links {
+    width: 35rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.link-logo {
+    width: 6rem;
+    height: 6rem;
+}
+
+.contact-button {
+    width: 14rem;
+    height: 3rem;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #A65224 0%, #FE7624 68.5%);
+    color: white;
+    border: 0rem;
+    margin: 2.8rem;
+    font-size: 1.3rem;
 }
