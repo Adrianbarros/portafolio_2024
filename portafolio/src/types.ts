@@ -6,7 +6,8 @@ export interface Employment {
     image: string,
     statement: string,
     skills: string[],
-    year: number
+    year: number,
+    website: string,
 }
 
 export interface SectionRefs {

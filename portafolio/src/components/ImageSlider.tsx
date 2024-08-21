@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Employment } from '../types';
 import arrow from '../assets/arrowCircle.svg'
+import { motion } from 'framer-motion'
+import { handleOpenLink } from '../utils/utils';
 
 interface Props {
     imageUrls: string[]
@@ -24,13 +26,21 @@ export const ImageSlider = ({ imageUrls, data }: Props) => {
 
 
     return (
-        <div className='entry-container'>
+        <motion.div className='entry-container'>
             {data.map(entry => (
-                <div style={{
+                <motion.div style={{
                     backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, .9)), url(${imageUrls[entry.id]})`,
                     width: '100vw', height: '100vh', backgroundSize: 'cover', flexShrink: '0', display: 'flex', overflow: 'hidden',
-                    translate: `${-100 * imageIndex}%`
-                }}>
+                }}
+                    animate={{
+                        translateX: `${-100 * imageIndex}%`,
+                        scale: imageIndex === entry.id ? 1 : 0.85
+                    }}
+                    transition={{
+                        type: 'keyframes',
+                        duration: 0.8
+                    }}
+                >
                     <div className="experience-content">
                         <div className="experience-info">
                             <div className="data-title"> {entry.title} @ {entry.company}</div>
@@ -45,7 +55,11 @@ export const ImageSlider = ({ imageUrls, data }: Props) => {
                                     <div className="data-tag">{skill}</div>
                                 ))}
                             </div>
-                            <div className="data-button"> View More</div>
+                            <motion.button
+                                className="data-button"
+                                onClick={() => handleOpenLink(entry.website)}
+                                whileHover={{ scale: 1.2 }}
+                            > View More</motion.button>
                         </div>
                         <div className="date-slider" >
                             {imageIndex > 0 && <img className="arrows" src={arrow} onClick={() => handlePrevImage()} style={{ transform: 'rotateY(180deg)' }} />}
@@ -55,9 +69,9 @@ export const ImageSlider = ({ imageUrls, data }: Props) => {
                     </div>
 
 
-                </div>
+                </motion.div >
             ))}
-        </div>
+        </motion.div>
 
     )
 }
