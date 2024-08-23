@@ -62,9 +62,9 @@ export const ImageSlider = ({ imageUrls, data }: Props) => {
                             > View More</motion.button>
                         </div>
                         <div className="date-slider" >
-                            {imageIndex > 0 && <img className="arrows" src={arrow} onClick={() => handlePrevImage()} style={{ transform: 'rotateY(180deg)' }} />}
+                            {imageIndex > 0 && <img className="arrows" alt='arrow left' src={arrow} onClick={() => handlePrevImage()} style={{ transform: 'rotateY(180deg)' }} />}
                             <div className="date"> {entry.year}</div>
-                            <img className="arrows" src={arrow} onClick={() => handleNextImage()} />
+                            <img className="arrows" alt='arrow right' src={arrow} onClick={() => handleNextImage()} />
                         </div>
                     </div>
 

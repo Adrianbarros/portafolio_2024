@@ -9,6 +9,9 @@
     z-index: 2;
 }
 
+.header-in-experience {
+    color: white !important;
+}
 
 
 .tags {
@@ -16,6 +19,8 @@
     flex-direction: row;
     align-items: center;
 }
+
+
 
 .tag-button {
     background: transparent;
@@ -46,6 +51,12 @@
     width: 5rem;
     height: .1rem;
     background-color: #1B1C37;
+}
+
+.white-line {
+    width: 5rem;
+    height: .1rem;
+    background-color: white;
 }
 
 @media (max-width: 768px) {

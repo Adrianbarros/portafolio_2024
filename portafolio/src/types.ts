@@ -16,3 +16,9 @@ export interface SectionRefs {
     skills: React.RefObject<HTMLDivElement>;
     contact: React.RefObject<HTMLDivElement>;
 };
+
+
+export interface VisibilityContextType {
+    isExperienceVisible: boolean;
+    setIsExperienceVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
