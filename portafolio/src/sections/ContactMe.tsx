@@ -14,7 +14,12 @@ export const ContactMe = forwardRef<HTMLDivElement>((props, ref) => {
         <div className='contact-section' ref={ref} id="contact">
 
             <div className='contact-title'> My professional statement</div>
-            <div className='contact-text'>I am a UI/UX Designer, I like to make interfaces simple and aesthetically pleasing for users; The idea is not to create an interface for creating it, it is that users prefer you because your product is easy to use.I am a UI/UX Designer, I like to make interfaces simple and aesthetically pleasing for users; The idea is not to create an interface for creating it, it is that users prefer you because your product is easy to use.I am a UI/UX Designer, I like to make interfaces simple and aesthetically pleasing for users; The idea is not to create an interface for creating it, it is that users prefer you because your product is easy to use.I am a UI/UX Designer, I like to make interfaces simple and aesthetically pleasing for users; The idea is not to create an interface for creating it, it is that users prefer you because your product is easy to use.</div>
+            <div className='contact-text'>
+                Technically skilled software engineer with 3+ years of proven experience in the development and deployment of software solutions utilizing front-end, back-end, and full stack technologies. Demonstrated ability to use teamwork, leadership, flexibility, and creative problem-solving skills to develop, maintain, and scale robust and high-performance applications within agile, fast-paced environments.
+
+            </div>
+
+
 
             <div className='social-links'>
                 <motion.img
