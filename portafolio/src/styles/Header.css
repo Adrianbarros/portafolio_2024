@@ -53,6 +53,7 @@
     background-color: #1B1C37;
 }
 
+
 .white-line {
     width: 5rem;
     height: .1rem;
@@ -61,15 +62,37 @@
 
 @media (max-width: 768px) {
     .header {
+        min-width: 100%;
         height: auto;
         padding: 1rem;
         margin-bottom: 2rem;
     }
 
-    .name {
+    .tags {
+        align-items: center;
         margin: 0;
-        font-size: 24px;
-        text-align: center;
+        font-size: .01rem;
+    }
+
+    .tag-button {
+        margin: 0.5rem 1rem;
+    }
+
+    .contact {
+        margin: 1rem 0 0;
+    }
+
+
+
+}
+
+@media (max-width: 425px) {
+    .header {
+        height: auto;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        margin-right: 20rem;
+        justify-content: flex-start;
     }
 
     .tags {
@@ -77,18 +100,19 @@
         margin: 0;
     }
 
-    .tag-button {
-        margin: 0.5rem 0;
+    .line {
+        width: 1rem;
+        height: .1rem;
+        background-color: #1B1C37;
     }
 
-    .contact {
-        margin: 1rem 0 0;
+    .tag {
+        color: #1B1C37;
+        font-family: Poppins;
+        font-size: .8rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
     }
 
-    .button {
-        width: 100%;
-        max-width: 300px;
-        height: 3rem;
-        font-size: 16px;
-    }
+
 }
