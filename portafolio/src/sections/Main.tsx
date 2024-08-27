@@ -42,12 +42,9 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
     }
     return (
         <div className="container">
-
-            <Lottie options={defaultOptions} style={{
-                marginTop: '-10rem',
-                marginLeft: '-13rem'
-            }} />
-
+            <div className="lottie">
+                <Lottie options={defaultOptions} />
+            </div>
 
             <div className="intro">
 

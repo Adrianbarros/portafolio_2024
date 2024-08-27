@@ -85,10 +85,7 @@
     align-items: center;
 }
 
-.lottie {
-    width: 25%;
-    height: 25%;
-}
+
 
 .scroller {
     display: flex;
@@ -121,8 +118,5 @@
         flex: 0 0 20%;
     }
 
-    .lottie {
-        width: 20%;
-        height: 20%;
-    }
+
 }

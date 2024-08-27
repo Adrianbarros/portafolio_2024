@@ -5,7 +5,15 @@
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    overflow: visible;
 }
+
+.lottie {
+    margin-top: -10rem;
+    margin-left: -13rem;
+}
+
+
 
 .intro {
     display: flex;
@@ -84,4 +92,71 @@
     position: relative;
     top: 3rem;
     left: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-top: -10rem;
+    }
+
+    .greeding {
+        display: flex;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 105%;
+        color: var(--Negro-Lineal, #2a2c55);
+        margin-left: -5rem;
+    }
+
+    .first-line {
+        display: flex;
+        margin-left: -8rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .description {
+        width: 18rem;
+        font-size: .7rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-align: left;
+        margin-top: 13rem;
+        margin-left: -13rem;
+    }
+
+    .lottie {
+        width: 20rem;
+        height: 20rem;
+        margin-top: -20rem;
+        margin-left: auto;
+    }
+
+
+
+    .button-main {
+        display: flex;
+        flex-direction: row;
+        height: 5rem;
+        margin-left: -8rem;
+    }
+
+    .button-text {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 600;
+        width: 7rem;
+
+    }
+
+    .curved-arrow {
+        visibility: hidden;
+    }
+
 }
