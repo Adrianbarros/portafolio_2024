@@ -39,6 +39,7 @@
 }
 
 .contact-button {
+    display: flex;
     width: 14rem;
     height: 3rem;
     border-radius: 16px;
@@ -47,4 +48,16 @@
     border: 0rem;
     margin: 2.8rem;
     font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .contact-text {
+        width: 90%;
+    }
+
+    .social-links {
+        width: 90%;
+    }
 }
