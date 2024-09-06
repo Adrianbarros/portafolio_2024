@@ -88,9 +88,10 @@
 
 @media (max-width: 425px) {
     .header {
+        min-width: 100%;
         height: auto;
         padding: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         margin-right: 20rem;
         justify-content: flex-start;
     }
