@@ -102,3 +102,90 @@
 .arrows {
     margin: 1.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .experince-section {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+
+    .entry-container {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .experience-content {
+        width: 90%;
+        padding: 10%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-info {
+        text-align: center;
+        align-items: center;
+    }
+
+    .data-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .data-text {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .data-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 0.5rem;
+    }
+
+    .data-tag {
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+        flex: 0 1 auto;
+    }
+
+    .data-button {
+        width: 100%;
+        height: 3rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+
+    .date-slider {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .date {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .arrows {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+}
