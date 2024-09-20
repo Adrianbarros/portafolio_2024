@@ -16,4 +16,3 @@ Here I will leave some images until is done!
 
 ---
 ## Skill Page
-![](media/skills.gif)
