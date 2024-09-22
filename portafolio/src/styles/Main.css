@@ -85,6 +85,7 @@
     margin-top: 1.8rem;
     margin-left: -5rem;
     margin-bottom: -2rem;
+    text-align: justify;
 }
 
 
@@ -100,12 +101,12 @@
         display: flex;
         flex-direction: column;
         width: 30%;
-        margin-top: -10rem;
+        margin-top: -5rem;
     }
 
     .greeding {
         display: flex;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-style: normal;
         font-weight: 600;
         line-height: 105%;
@@ -115,20 +116,21 @@
 
     .first-line {
         display: flex;
-        margin-left: -8rem;
+        margin-left: -7rem;
         margin-bottom: 1rem;
 
     }
 
     .description {
-        width: 18rem;
-        font-size: .7rem;
+        width: 19rem;
+        font-size: .9rem;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
         text-align: left;
         margin-top: 13rem;
-        margin-left: -13rem;
+        margin-left: -14rem;
+        text-align: justify;
     }
 
     .lottie {
@@ -139,12 +141,11 @@
     }
 
 
-
     .button-main {
+        padding: 1rem 2rem;
         display: flex;
         flex-direction: row;
-        height: 5rem;
-        margin-left: -8rem;
+        margin-left: -6rem;
     }
 
     .button-text {

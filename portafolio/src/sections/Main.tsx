@@ -76,10 +76,7 @@ export const Main: React.FC<MainProps> = ({ sectionRef }) => {
                         className="button-main"
                     >
                         <div className="button-text">Contact Me! </div>
-                        <motion.img
-                            src={ArrowCircle}
-                            animate={logoControls}
-                            alt="Arrow Circle" />
+
                     </motion.button >
 
                     <motion.img
