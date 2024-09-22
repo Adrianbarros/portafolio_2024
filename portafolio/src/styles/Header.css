@@ -32,6 +32,7 @@
 
 .tag-button:hover .tag {
     transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .tag {
@@ -41,10 +42,6 @@
     font-weight: 500;
 
     transition: background-color 0.3s ease;
-}
-
-.tag-button:hover .tag {
-    background: rgba(255, 255, 255, 0.1);
 }
 
 .line {
@@ -88,12 +85,13 @@
 
 @media (max-width: 425px) {
     .header {
-        min-width: 100%;
+        display: flex;
         height: auto;
         padding: 1rem;
-        margin-bottom: 5rem;
-        margin-right: 20rem;
-        justify-content: flex-start;
+        margin: 0;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .tags {
@@ -113,6 +111,10 @@
         font-size: .8rem;
         font-weight: 500;
         transition: background-color 0.3s ease;
+    }
+
+    .tag-button {
+        margin: 0 .5rem;
     }
 
 

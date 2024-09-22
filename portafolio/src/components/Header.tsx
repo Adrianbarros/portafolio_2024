@@ -23,11 +23,11 @@ export const Header: React.FC<HeaderProps> = ({ sectionRef }) => {
                 <button onClick={() => scrollToSection(sectionRef.about)} className="tag-button">
                     <div className={`tag ${isExperienceVisible ? 'header-in-experience' : ''}`}>Home</div>
                 </button>
-                <button onClick={() => scrollToSection(sectionRef.experience)} className="tag-button">
-                    <div className={`tag ${isExperienceVisible ? 'header-in-experience' : ''}`}>Experience</div>
-                </button>
                 <button onClick={() => scrollToSection(sectionRef.skills)} className="tag-button">
                     <div className={`tag ${isExperienceVisible ? 'header-in-experience' : ''}`}>Skills</div>
+                </button>
+                <button onClick={() => scrollToSection(sectionRef.experience)} className="tag-button">
+                    <div className={`tag ${isExperienceVisible ? 'header-in-experience' : ''}`}>Experience</div>
                 </button>
                 <button onClick={() => scrollToSection(sectionRef.contact)} className="tag-button">
                     <div className={`tag ${isExperienceVisible ? 'header-in-experience' : ''}`}>Contact</div>
