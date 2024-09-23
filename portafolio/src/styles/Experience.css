@@ -126,7 +126,6 @@
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         flex-wrap: nowrap;
-        /* Prevent wrapping */
     }
 
     .experience-content {
@@ -168,12 +167,12 @@
 
     .data-tag {
         margin: 0.5rem 0;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem .5rem;
         flex: 0 1 auto;
     }
 
     .data-button {
-        width: 100%;
+        width: 60%;
         height: 3rem;
         margin-top: 2rem;
         font-size: 1rem;
