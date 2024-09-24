@@ -85,13 +85,13 @@
 
 @media (max-width: 425px) {
     .header {
-        display: flex;
-        height: auto;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #ffffff;
         padding: 1rem;
-        margin: 0;
-        justify-content: center;
         box-sizing: border-box;
-        overflow-x: hidden;
     }
 
     .tags {
@@ -116,6 +116,5 @@
     .tag-button {
         margin: 0 .5rem;
     }
-
 
 }

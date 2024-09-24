@@ -8,20 +8,20 @@ const useInfiniteScroll = (scrollAmount: number, intervalSpeed: number) => {
         if (!scroller) return;
 
         const handleScroll = () => {
-            if (scrollAmount > 0) {
-                scroller.scrollLeft += scrollAmount;
-                if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
-                    scroller.scrollLeft = 0;
-                }
-            } else {
-                scroller.scrollLeft += scrollAmount;
-                if (scroller.scrollLeft <= 0) {
-                    scroller.scrollLeft = scroller.scrollWidth / 2;
-                }
+            scroller.scrollLeft += scrollAmount;
+
+            if (scrollAmount > 0 && scroller.scrollLeft >= scroller.scrollWidth / 2) {
+
+                scroller.scrollLeft = 0;
+            } else if (scrollAmount < 0 && scroller.scrollLeft <= 0) {
+
+                scroller.scrollLeft = scroller.scrollWidth / 2;
             }
         };
 
-        const intervalId = setInterval(handleScroll, intervalSpeed);
+        const intervalId = setInterval(() => {
+            handleScroll();
+        }, intervalSpeed);
 
         return () => clearInterval(intervalId);
     }, [scrollAmount, intervalSpeed]);

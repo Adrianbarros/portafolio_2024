@@ -10,6 +10,7 @@ const languagesSvgs = [
     { name: 'JavaScript', path: require('../assets/logos/javaScript.svg').default },
     { name: 'HTML', path: require('../assets/logos/html.svg').default },
     { name: 'CSS', path: require('../assets/logos/css.svg').default },
+    { name: 'SQL', path: require('../assets/logos/sql_icon.svg').default },
 ];
 const frameworkSvgs = [
     { name: 'React', path: require('../assets/logos/reactLogo.svg').default },
@@ -46,7 +47,7 @@ export const Skills = forwardRef<HTMLDivElement>((props, ref) => {
                 </div>
             </div>
             <div className="sub-title-skills">
-                <div className="sub-title-text">Frameworks & Libraries</div>
+                <div className="sub-title-text">Frameworks & Technologies</div>
             </div>
             <div className="scroller" ref={frameworksScrollerRef}>
                 <div className="skill-list scroller_items">
